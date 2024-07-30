@@ -31,3 +31,5 @@
 !/app/assets/builds/.keep
 /public/assets
 /node_modules
+
+.overmind.env

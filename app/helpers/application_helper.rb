@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   include Pagy::Frontend
+  include Heroicon::Engine.helpers
 
   def page_title
-    "Rails + Ralix + Tailwind | #{controller_name.humanize}"
+    "Rails + Stimulus + Tailwind | #{controller_name.humanize}"
   end
 
   def body_class
@@ -15,5 +18,13 @@ module ApplicationHelper
     else
       "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium #{extra}"
     end
+  end
+
+  def time_ago(time_object)
+    "#{time_ago_in_words(time_object)} ago"
+  end
+
+  def format_time(time_object)
+    l(time_object, format: :long)
   end
 end

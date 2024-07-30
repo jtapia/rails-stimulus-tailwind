@@ -1,11 +1,13 @@
-# Rails + Ralix + Tailwind
+# 🚀 Rails + Stimulus + Tailwind
+
+Inspired by https://github.com/ralixjs/rails-ralix-tailwind
 
 > Starter Kit to build Rails applications fast
 
 Powered by:
 
-- [Rails 7](https://rubyonrails.org)
-- [Ralix](https://github.com/ralixjs/ralix)
+- [Rails](https://rubyonrails.org)
+- [Stimulus](https://github.com/hotwired/stimulus-rails)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Turbo](https://turbo.hotwired.dev)
 

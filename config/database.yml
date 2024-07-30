@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: <%= ENV.fetch('DATABASE_NAME', 'rails-stimulus-tailwind_development')  %>
 
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: <%= ENV.fetch('DATABASE_NAME', 'rails-stimulus-tailwind_test')  %>
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: <%= ENV.fetch('DATABASE_NAME', 'rails-stimulus-tailwind_production')  %>
